@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Shrikhand', cursive; */
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: $base-font-size;
+}
+
+h1{
+    font-family: 'Shrikhand', cursive;
+    font-size: 2rem;
+}

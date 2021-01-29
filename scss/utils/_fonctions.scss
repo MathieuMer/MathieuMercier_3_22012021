@@ -1,0 +1,9 @@
+// Fonction pour supprimer les unités de mesure
+@function trim-unit($value){
+    @return $value / ($value * 0 + 1);
+}
+
+// Calculateur de rem
+@function rem-calc($value){
+    @return $value / trim-unit($base-font-size) * 1rem;
+}
