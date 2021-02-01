@@ -1,19 +1,114 @@
-/*Mise en page de la page d'accueil*/
+/*Règles spécicfiques page d'accueil*/
 
+/*Style Formulaire page d'accueil*/
+.conteneur-form{
+    margin: 0;
+    padding: 0 0 3rem 0;
+    background: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &__bloc-input{
+        width: 100%;
+        height: 3rem;
+        background: #EAEAEA;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: flex-end;
+        & label{
+        display: flex;
+        align-items: center;
+        margin-right: 1rem;
+        }
+        &__input{
+            width: 65%;
+            border: none;
+            background: #EAEAEA;
+            outline: none;
+            color: black;
+            font-size: 1.2rem;
+        }
+    }
+    & h2{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 0;
+    }
+    & p{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+    & button{
+        margin-top: 2rem;
+        border: none;
+        border-radius: 2rem;
+        background: linear-gradient(to bottom right, $secondaire, $primaire);
+        color: white;
+        font-size: 0.9rem;
+        padding: 1rem 1.2rem;
+        font-weight: 600;
+    }
 
+}
+/*Style Nav Fonctionnement*/
+.fonctionnement{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+    & h2{
+        margin-top: 2rem;
+        margin-bottom: 0;
+        align-self: flex-start;
+    }
+    &__btn{
+        display: flex;
+        align-items: baseline;
+        background: #F6F6F6;
+        border-radius: 1.5rem;
+        width: 97%;
+        padding: 1.5rem 0;
+        margin-top: 1rem;
+        box-shadow: 0 0.2rem 0.2rem rgba($color: #000000, $alpha: 0.1);
+        &--num{
+            width: 1.5rem;
+            height: 1.5rem;
+            font-size: 0.9rem;
+            background: $primaire;
+            border-radius: 50%;
+            color: white;
+            margin-left: -0.75rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &--icone{
+            margin-left: 1.5rem;
+            color: rgba($color: #000000, $alpha: 0.6)
+            
+        }
+        &--texte{
+            margin-left: 1.5rem;
+            font-weight: 600;
+        }
+    }
+}
 
-
-/*Mise en page Bloc Restaurant*/
+/*Style Section Restaurant*/
 .restaurants{
     width: 90%;
     background: #F6F6F6;
+    margin-top: 4rem;
     padding: 5% 5%;
-    border-radius: calculate-rem(20px);
-    &__titre{
-
-    }
     &__card{
-        margin: 0;
+        margin: 1.3rem 0;
         position: relative;
         &__img{
             width: 100%;
@@ -41,13 +136,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            & h3{
+                margin: 0;
+            }
             & p{
                 margin: 0;
-                
             }
             & .fa-heart{
-                font-size: 1.2rem;
-                
+                font-size: 1.4rem;   
             }
         }
     }

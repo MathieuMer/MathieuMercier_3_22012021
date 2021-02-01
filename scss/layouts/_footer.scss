@@ -1,0 +1,21 @@
+footer{
+    background: #353535;
+    color: white;
+    padding: 1.5rem 0 2rem 2rem;
+    & p{
+        font-family: 'Shrikhand', cursive;
+        font-size: 1.2rem;
+        margin-top: 0;
+    }
+    & a{
+        text-decoration: none;
+        color: white;
+    }
+    & ul{
+        padding: 0;
+    }
+    & li{
+        list-style: none;
+        margin-top: 0.5rem;
+    }
+}
