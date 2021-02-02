@@ -14,9 +14,66 @@ h1 {
   font-size: rem-calc(32px);
 }
 
+/*Mini Reset*/
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+/*Règles global*/
 body {
   width: 100%;
-  margin: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 /*Règles spécicfiques page d'accueil*/
@@ -172,10 +229,16 @@ body {
 
 /*Style Section Restaurant*/
 .restaurants {
-  width: 90%;
+  position: relative;
+  width: 100%;
   background: #F6F6F6;
   margin-top: 4rem;
   padding: 5% 5%;
+}
+
+.restaurants a {
+  text-decoration: none;
+  color: black;
 }
 
 .restaurants__card {
@@ -221,15 +284,39 @@ body {
 }
 
 .restaurants__card__caption h3 {
-  margin: 0;
+  padding-bottom: 0.2rem;
 }
 
 .restaurants__card__caption p {
   margin: 0;
 }
 
-.restaurants__card__caption .fa-heart {
+.restaurants .fa-heart {
   font-size: 1.4rem;
+  position: absolute;
+  top: 80%;
+  right: 10%;
+  color: black;
+}
+
+.restaurants .fa-heart:active::after {
+  opacity: 1;
+}
+
+.restaurants .fa-heart:after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f004";
+  color: #9356DC;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: opacity 400ms;
+  transition: opacity 400ms;
 }
 
 header {
@@ -242,7 +329,7 @@ header {
 
 header h1 {
   text-align: center;
-  margin: 0;
+  font-size: 2rem;
 }
 
 header .fas {
@@ -256,6 +343,10 @@ footer {
   background: #353535;
   color: white;
   padding: 1.5rem 0 2rem 2rem;
+}
+
+footer .footer__logo {
+  margin-bottom: 1rem;
 }
 
 footer p {
@@ -276,5 +367,27 @@ footer ul {
 footer li {
   list-style: none;
   margin-top: 0.5rem;
+}
+
+footer .footer__icon:before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  width: 1.8rem;
+}
+
+footer .icon1:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f2e7";
+}
+
+footer .icon2:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f4c4";
 }
 /*# sourceMappingURL=style.css.map */

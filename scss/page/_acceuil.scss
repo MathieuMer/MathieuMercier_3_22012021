@@ -103,10 +103,15 @@
 
 /*Style Section Restaurant*/
 .restaurants{
-    width: 90%;
+    position: relative;
+    width: 100%;
     background: #F6F6F6;
     margin-top: 4rem;
     padding: 5% 5%;
+    a{
+        text-decoration: none;
+        color: black;
+    }
     &__card{
         margin: 1.3rem 0;
         position: relative;
@@ -137,14 +142,40 @@
             justify-content: space-between;
             align-items: center;
             & h3{
-                margin: 0;
+                padding-bottom: 0.2rem;
             }
             & p{
                 margin: 0;
             }
-            & .fa-heart{
-                font-size: 1.4rem;   
+            
+        }
+    }
+    & .fa-heart{
+        font-size: 1.4rem;
+        position: absolute;
+        top: 80%;
+        right: 10%;
+        color: black;
+        &:active{
+            &::after{
+                  opacity: 1;
             }
         }
+        &:after{
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            content: "\f004";
+            color: $primaire;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;  
+            left: 0;
+            opacity: 0;
+            z-index: 1;
+            transition: opacity 400ms;
+                    
+        }
+                
     }
 }
