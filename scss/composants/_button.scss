@@ -1,0 +1,15 @@
+button{
+    border: none;
+    border-radius: 2rem;
+    background: linear-gradient(to bottom right, $secondaire, $primaire);
+    color: white;
+    font-size: 0.9rem;
+    padding: 1rem 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    &:hover{
+        box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
+        transition: box-shadow 300ms;
+    }
+}

@@ -1,5 +1,46 @@
 /*Règles spécicfiques page d'accueil*/
 
+/*Loader*/
+.loader{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__txt{
+        font-size: 2rem;
+        font-family: 'Shrikhand', cursive;
+        color: #FFF;
+        &::before{
+            content: 'ohmyfood';
+            position: absolute;
+            mix-blend-mode: difference;
+        }
+    }
+    &__conteneur{
+        display: inline-flex;
+    }
+}
+
+
+/*Delay apparition contenu de la page*/
+.delay{
+    animation: delay 3s;
+}
+
+@keyframes delay{
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 /*Style Formulaire page d'accueil*/
 .conteneur-form{
     margin: 0;
@@ -45,15 +86,7 @@
     }
     & button{
         margin-top: 2rem;
-        border: none;
-        border-radius: 2rem;
-        background: linear-gradient(to bottom right, $secondaire, $primaire);
-        color: white;
-        font-size: 0.9rem;
-        padding: 1rem 1.2rem;
-        font-weight: 600;
     }
-
 }
 /*Style Nav Fonctionnement*/
 .fonctionnement{

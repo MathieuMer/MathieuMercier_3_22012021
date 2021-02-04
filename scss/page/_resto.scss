@@ -1,0 +1,139 @@
+.resto-img{
+
+}
+
+/*Style titre resto */
+
+
+.conteneur-titre-resto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F6F6F6;
+    border-radius: 2rem 2rem 0 0;
+    padding: 2rem 1rem 0rem 1rem;
+    margin-top: -2rem;
+    position: sticky;
+    & h2 {
+    font-family: 'Shrikhand', cursive;
+    }
+    & .far{
+        font-size: 1.4rem;
+
+    }
+}
+
+/*Style Section */
+
+.conteneur-resto{
+    background: #F6F6F6;
+    padding: 1rem 1rem 4rem 1rem;
+    & form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__titre{
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+    }
+    &__btn{
+        margin-top: 3rem;
+        width: 10rem;
+    }
+}
+
+.conteneur-entree, .conteneur-plats, .conteneur-desserts{
+    padding-top: 2.5rem;
+    position: relative;
+    width: 100%;
+}
+
+.conteneur-entree::after, .conteneur-plats::after, .conteneur-desserts::after{
+    content: '';
+    position: absolute;
+    background: $tertiaire;
+    width: 2.5rem;
+    height: 0.2rem;
+    top: 4rem;
+    left: 0;
+}
+
+/*Inputs 1 à 9 des pages resto cachées, attention à input page d'acceuil */
+
+@for $i from 1 through 9 {
+    #input#{$i}-resto{
+        position: absolute;
+        left: -9999px;
+    }
+}
+
+/*Chaque bloc est un label conteneur flex */
+.label__conteneur{
+    position: relative;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+    user-select: none;
+    background: #FFF;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-top: 1rem;
+    box-shadow: 0 0.2rem 0.2rem rgba($color: #000000, $alpha: 0.1);
+    &:hover{
+        box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
+        transition: box-shadow 300ms;
+    }
+}
+
+/*Style des éléments enfants du conteneur label */
+.label{
+    &__titre{
+        height: 100%;
+        width: 80%;
+        padding-left: 1rem;
+        &h3{
+            height: 50%;
+            padding-top: 1rem;
+        }
+        &p{
+            height: 50%;
+            padding-top: 0.5rem;
+        }
+    }
+    &__prix{
+        height: 50%;
+        padding-top: 0.5rem;
+        padding-right: 1rem;
+    }
+    &__coche{
+        width: 0;
+        height: 100%;
+        background: $tertiaire;
+        border-radius: 0 1rem 1rem 0;
+        transition: width 500ms ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::after{
+            content: '\f058';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #FFF;
+            font-size: 1.5rem;
+            transform: rotate(0);
+            transition: transform 1s ease;
+        }
+    }
+}
+
+/*Action lorsque l'on selectionne un plat */
+
+input:checked + .label__conteneur > div:last-child{
+    width: 5rem;
+    &::after{
+        transform: rotate(360deg);
+    }
+}

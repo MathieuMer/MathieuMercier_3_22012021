@@ -10,13 +10,19 @@
   </head>
 
   <body>
+    
+    <div class="loader">
+      <div class="loader__conteneur">
+        <span class="loader__txt">ohmyfood</span>
+      </div>
+    </div>
 
-    <header class="header-accueil">
-      <i class="fas fa-arrow-left"></i>
+    <header class="header-accueil delay">
+      <i class="fas fa-arrow-left cache"></i>
       <h1>ohmyfood</h1>
     </header>
 
-    <form class="conteneur-form">
+    <form class="conteneur-form delay">
       <div class="conteneur-form__bloc-input">
         <label for="recherche"><i class="fas fa-map-marker-alt"></i></label>
         <input class="conteneur-form__bloc-input__input" type="text" name="name" placeholder="Paris, Belleville" maxlength="30" size="30">
@@ -26,7 +32,7 @@
       <button type="submit">Explorez nos restautants</button>
     </form>
 
-    <nav class="fonctionnement">
+    <nav class="fonctionnement delay">
       <h2>Fonctionnement</h2>
       <div class="fonctionnement__btn">
         <div class="fonctionnement__btn--num">1</div>
@@ -47,14 +53,16 @@
       </div>
     </nav>
 
-    <section class="restaurants">
+    <section class="restaurants delay">
 
       <h2 class="restaurants__titre">Restaurants</h2>
 
 
       <figure class="restaurants__card">
         <a href="resto_1.html">
-          <img class="restaurants__card__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash_min.jpg" alt="resto_1">
+          <img class="restaurants__card__img" 
+          srcset="images/restaurants/resto1-desktop.jpg 3200w, images/restaurants/resto1-desktop.jpg 1600w, images/restaurants/resto1-mobile.jpg 800w" 
+          src="images/restaurants/resto1-desktop.jpg" alt="resto_1">
           <p class="restaurants__card__nouveau">Nouveau</p>
           <figcaption class="restaurants__card__caption">
             <div>
@@ -68,7 +76,9 @@
 
       <figure class="restaurants__card">
         <a href="resto_2.html">
-          <img class="restaurants__card__img" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash_min.jpg" alt="resto_2">
+          <img class="restaurants__card__img" 
+          srcset="images/restaurants/resto2-desktop.jpg 3200w, images/restaurants/resto2-desktop.jpg 1600w, images/restaurants/resto2-mobile.jpg 800w"
+          src="images/restaurants/resto2-desktop.jpg" alt="resto_2">
           <p class="restaurants__card__nouveau">Nouveau</p>
           <figcaption class="restaurants__card__caption">
             <div>
@@ -82,7 +92,9 @@
 
       <figure class="restaurants__card">
         <a href="resto_3.html">
-          <img class="restaurants__card__img" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash_min.jpg" alt="resto_3">
+          <img class="restaurants__card__img"
+          srcset="images/restaurants/resto3-desktop.jpg 3200w, images/restaurants/resto3-desktop.jpg 1600w, images/restaurants/resto3-mobile.jpg 800w"
+          src="images/restaurants/resto3-desktop.jpg" alt="resto_3">
           <figcaption class="restaurants__card__caption">
             <div>
               <h3>A la française</h3>
@@ -95,7 +107,9 @@
 
       <figure class="restaurants__card">
         <a href="resto_4.html">
-          <img class="restaurants__card__img" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash_min.jpg" alt="resto_4">
+          <img class="restaurants__card__img"
+          srcset="images/restaurants/resto4-desktop.jpg 3200w, images/restaurants/resto4-desktop.jpg 1600w, images/restaurants/resto4-mobile.jpg 800w"
+          src="images/restaurants/resto4-desktop.jpg" alt="resto_4">
           <figcaption class="restaurants__card__caption">
             <div>
               <h3>Le délice des sens</h3>
@@ -108,7 +122,7 @@
 
     </section>
 
-    <footer>
+    <footer class="delay">
       <p class="footer__logo">ohmyfood</p>
       <ul class="footer__ul">
         <li class="footer__icon icon1"><a href="#">Proposer un restaurant</a></li>
