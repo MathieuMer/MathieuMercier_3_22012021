@@ -17,10 +17,6 @@
     & h2 {
     font-family: 'Shrikhand', cursive;
     }
-    & .far{
-        font-size: 1.4rem;
-
-    }
 }
 
 /*Style Section */
@@ -85,6 +81,32 @@
     &:hover{
         box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
         transition: box-shadow 300ms;
+    }
+}
+
+@for $i from 1 through 9 {
+    label[for="input#{$i}-resto"]{
+       animation: apparition 1s backwards;
+       animation-delay: $i * 150ms;
+    }
+}
+@keyframes apparition{
+    0%{
+        transform: translateY(4rem) scale(0.8);
+        opacity: 0;
+    }
+
+    10%{
+        opacity: 0;
+    }
+
+    70%{
+        transform: scale(1);
+    }
+        
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
 

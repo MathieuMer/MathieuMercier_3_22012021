@@ -7,12 +7,11 @@ header{
         text-align: center;
         font-size: 2rem;
     }
-    & .fas{
+    & a{
         position: absolute;
         top: 25%;
         left: 5%;
-    }
-    & .cache{
-        display: none;
+        text-decoration: none;
+        color: black;
     }
 }
