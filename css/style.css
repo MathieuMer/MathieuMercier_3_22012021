@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*Calculateurs REM*/
+/*Fontion lighten*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 /* font-family: 'Roboto', sans-serif;
@@ -100,13 +101,12 @@ h3 {
           flex-direction: column;
   font-size: 2rem;
   font-family: 'Shrikhand', cursive;
-  color: #000;
   z-index: -1;
 }
 
 .loader__assiette {
-  width: 13rem;
-  height: 13rem;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,43 +118,152 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  background: #FFF;
+  background: #f1f1f1;
   -webkit-box-shadow: inset 0.4rem -0.2rem 1rem 1rem rgba(0, 0, 0, 0.2);
           box-shadow: inset 0.4rem -0.2rem 1rem 1rem rgba(0, 0, 0, 0.2);
-  /*&:before{
-            content: '';
-            position: absolute;
-            top: -1rem;
-            left: -3rem;
-            bottom: -1rem;
-            right: -3rem;
-            border-radius: 50%;
-            border: #FFF 5px solid;
-            z-index: 0;
-            animation: loader_anim 3s infinite;
-        }*/
 }
 
 .loader__assiette:after {
   content: '';
   position: absolute;
-  top: -2rem;
-  left: -2rem;
-  width: 17rem;
-  height: 17rem;
+  top: -1rem;
+  left: -1rem;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
-  border: #c4c4c4 5px solid;
-  -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+  border: white 3px solid;
+  -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
   background: -webkit-gradient(linear, left top, right top, from(#9356DC), color-stop(#99E2D0), to(#FF79DA));
   background: linear-gradient(0.25turn, #9356DC, #99E2D0, #FF79DA);
   z-index: -2;
-  -webkit-animation: loader_anim 3s infinite;
-          animation: loader_anim 3s infinite;
+  -webkit-animation: loader_anim 3s;
+          animation: loader_anim 3s;
+}
+
+.loader__assiette:before {
+  content: '';
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  bottom: 0rem;
+  right: 0rem;
+  border-radius: 50%;
+  border: #FFF 10px solid;
+  z-index: 0;
+  opacity: 1;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
 }
 
 .loader__txt {
   margin-top: 8rem;
+  color: #9356DC;
+  background: #FFF;
+  position: relative;
+}
+
+.loader__fork {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 8rem;
+  margin-bottom: 12rem;
+  z-index: -3;
+  color: #303030;
+  -webkit-box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+  padding: 3rem 4rem 0 4rem;
+  background: repeating-linear-gradient(transparent, #99E2D0 100%), repeating-linear-gradient(0.25turn, transparent, #FF79DA 10%);
+  border: #9356DC ridge 6px;
+  border-radius: 1rem;
+}
+
+.loader__forkFG {
+  -webkit-animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.loader__forkFD {
+  padding-right: 0.5rem;
+  -webkit-animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+@-webkit-keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-1px, 1px, 0);
+            transform: translate3d(-1px, 1px, 0);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+    -webkit-filter: blur(1px);
+            filter: blur(1px);
+  }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, -1px, 0);
+            transform: translate3d(-4px, -1px, 0);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+    -webkit-filter: blur(1px);
+            filter: blur(1px);
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-1px, 1px, 0);
+            transform: translate3d(-1px, 1px, 0);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+    -webkit-filter: blur(1px);
+            filter: blur(1px);
+  }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, -1px, 0);
+            transform: translate3d(-4px, -1px, 0);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+    -webkit-filter: blur(1px);
+            filter: blur(1px);
+  }
 }
 
 @-webkit-keyframes loader_anim {
@@ -442,6 +551,13 @@ h3 {
 
 .restaurants__card__caption p {
   margin: 0;
+}
+
+.resto-img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*Style titre resto */
@@ -854,6 +970,8 @@ button:hover {
   transition: -webkit-box-shadow 300ms;
   transition: box-shadow 300ms;
   transition: box-shadow 300ms, -webkit-box-shadow 300ms;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff8de0), to(#9e67e0));
+  background: linear-gradient(to bottom right, #ff8de0, #9e67e0);
 }
 
 /*Style icones favori*/
