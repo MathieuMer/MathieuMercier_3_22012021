@@ -1,0 +1,99 @@
+// Page Index: Animations apparition progressive des 9 plats, 1 par 1
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 1px, 0);
+      filter: blur(0px);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+      filter: blur(1px);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, -1px, 0);
+      filter: blur(0px);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+      filter: blur(1px);
+    }
+}
+
+@keyframes loader_anim{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader_opacity{
+    0%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/*Delay apparition contenu de la page*/
+.delay{
+    animation: delay 3s;
+}
+
+@keyframes delay{
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+// Page RESTO: Animations apparition progressive des 9 plats, 1 par 1
+@for $i from 1 through 9 {
+    .anim#{$i}{
+       animation: apparition 1s backwards;
+       animation-delay: $i * 150ms;
+    }
+}
+@keyframes apparition{
+    0%{
+        transform: translateY(4rem) scale(0.8);
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    70%{
+        transform: scale(1);
+    }  
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/*Action lorsque l'on selectionne un plat sur la page resto */
+
+input:checked + .label__conteneur{
+    & .label__coche {
+        width: 20%;
+        &::after{
+        transform: rotate(360deg);
+        }
+    }  
+    & .label__titre{
+        width: 60%;
+    }
+}
+

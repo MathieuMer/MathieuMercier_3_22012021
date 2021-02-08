@@ -27,7 +27,7 @@
     <form class="conteneur-form delay">
       <div class="conteneur-form__bloc-input">
         <label for="recherche"><i class="fas fa-map-marker-alt"></i></label>
-        <input class="conteneur-form__bloc-input__input" type="text" name="name" placeholder="Paris, Belleville" maxlength="30" size="30">
+        <input id="recherche" class="conteneur-form__bloc-input__input" type="text" name="name" placeholder="Paris, Belleville" maxlength="30" size="30">
       </div>
       <h2>Réservez le menu qui vous convient</h2>
       <p>Découvrez des restaurants d'exeption, sélectionnés par nos soins.</p>
@@ -36,23 +36,23 @@
 
     <nav class="fonctionnement delay">
       <h2>Fonctionnement</h2>
-      <div class="fonctionnement__btn">
+      <a href="#" class="fonctionnement__btn">
         <div class="fonctionnement__btn--num">1</div>
         <div class="fonctionnement__btn--icone"><i class="fas fa-mobile-alt"></i></div>
         <div class="fonctionnement__btn--texte">Choisissez un restaurant</div>
-      </div>
+      </a>
 
-      <div class="fonctionnement__btn">
+      <a href="#" class="fonctionnement__btn">
         <div class="fonctionnement__btn--num">2</div>
         <div class="fonctionnement__btn--icone"><i class="fas fa-list"></i></div>
         <div class="fonctionnement__btn--texte">Composez votre menu</div>
-      </div>
+      </a>
 
-      <div class="fonctionnement__btn">
+      <a href="#" class="fonctionnement__btn">
         <div class="fonctionnement__btn--num">3</div>
         <div class="fonctionnement__btn--icone"><i class="fas fa-store"></i></div>
         <div class="fonctionnement__btn--texte">Dégustez au restaurant</div>
-      </div>
+      </a>
     </nav>
 
     <section class="restaurants delay">
@@ -64,14 +64,12 @@
         <a href="resto_1.html">
           <img class="restaurants__card__img" 
           srcset="images/restaurants/resto1-desktop.jpg 3200w, images/restaurants/resto1-desktop.jpg 1600w, images/restaurants/resto1-mobile.jpg 800w" 
-          src="images/restaurants/resto1-desktop.jpg" alt="resto_1">
+          src="images/restaurants/resto1-desktop.jpg" sizes="(min-width: 600px) 90vw, (min-width: 980px) 30vw, 100vw" alt="resto_1">
           <p class="restaurants__card__nouveau">Nouveau</p>
-          <figcaption class="restaurants__card__caption">
-            <div>
-              <h3>La palette du goût</h3>
-              <p>Ménilmontant</p>
-            </div>
-          </figcaption>
+          <div class="restaurants__card__caption">
+            <h3>La palette du goût</h3>
+            <p>Ménilmontant</p>
+          </div>
         </a>
         <input id="fav1" type="checkbox">
         <label class="label__fav1--accueil" for="fav1"><i class="far fa-heart"></i></label>
@@ -81,14 +79,12 @@
         <a href="resto_2.html">
           <img class="restaurants__card__img" 
           srcset="images/restaurants/resto2-desktop.jpg 3200w, images/restaurants/resto2-desktop.jpg 1600w, images/restaurants/resto2-mobile.jpg 800w"
-          src="images/restaurants/resto2-desktop.jpg" alt="resto_2">
+          src="images/restaurants/resto2-desktop.jpg" sizes="(min-width: 600px) 90vw, (min-width: 980px) 30vw, 100vw" alt="resto_2">
           <p class="restaurants__card__nouveau">Nouveau</p>
-          <figcaption class="restaurants__card__caption">
-            <div>
-              <h3>La note enchantée</h3>
-              <p>Charonne</p>
-            </div>
-          </figcaption>
+          <div class="restaurants__card__caption">
+            <h3>La note enchantée</h3>
+            <p>Charonne</p>
+          </div>
         </a>
         <input id="fav2" type="checkbox">
         <label class="label__fav2--accueil" for="fav2"><i class="far fa-heart"></i></label>
@@ -98,13 +94,11 @@
         <a href="resto_3.html">
           <img class="restaurants__card__img"
           srcset="images/restaurants/resto3-desktop.jpg 3200w, images/restaurants/resto3-desktop.jpg 1600w, images/restaurants/resto3-mobile.jpg 800w"
-          src="images/restaurants/resto3-desktop.jpg" alt="resto_3">
-          <figcaption class="restaurants__card__caption">
-            <div>
-              <h3>A la française</h3>
-              <p>Cité Rouge</p>
-            </div>
-          </figcaption>
+          src="images/restaurants/resto3-desktop.jpg" sizes="(min-width: 600px) 90vw, (min-width: 980px) 30vw, 100vw" alt="resto_3">
+          <div class="restaurants__card__caption">
+            <h3>A la française</h3>
+            <p>Cité Rouge</p>
+          </div>
         </a>
         <input id="fav3" type="checkbox">
         <label class="label__fav3--accueil" for="fav3"><i class="far fa-heart"></i></label>
@@ -114,13 +108,11 @@
         <a href="resto_4.html">
           <img class="restaurants__card__img"
           srcset="images/restaurants/resto4-desktop.jpg 3200w, images/restaurants/resto4-desktop.jpg 1600w, images/restaurants/resto4-mobile.jpg 800w"
-          src="images/restaurants/resto4-desktop.jpg" alt="resto_4">
-          <figcaption class="restaurants__card__caption">
-            <div>
+          src="images/restaurants/resto4-desktop.jpg" sizes="(min-width: 600px) 90vw, (min-width: 980px) 30vw, 100vw" alt="resto_4">
+          <div class="restaurants__card__caption">
               <h3>Le délice des sens</h3>
               <p>Folie-Méricourt</p>
-            </div>
-          </figcaption>
+          </div>
         </a>
         <input id="fav4" type="checkbox">
         <label class="label__fav4--accueil" for="fav4"><i class="far fa-heart"></i></label>

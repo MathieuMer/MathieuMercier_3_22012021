@@ -1,3 +1,4 @@
+/*Image page resto*/
 .resto-img{
     width: 100%;
     height: 250px;
@@ -6,7 +7,6 @@
 
 /*Style titre resto */
 
-
 .conteneur-titre-resto{
     display: flex;
     justify-content: space-between;
@@ -14,7 +14,7 @@
     background: #F6F6F6;
     border-radius: 2rem 2rem 0 0;
     padding: 2rem 1rem 0rem 1rem;
-    margin-top: -2rem;
+    margin-top: calculate-rem(-32px);
     position: sticky;
     & h2 {
     font-family: 'Shrikhand', cursive;
@@ -34,6 +34,7 @@
     &__titre{
         text-transform: uppercase;
         margin-bottom: 1.5rem;
+        font-size: 1rem;
     }
     &__btn{
         margin-top: 3rem;
@@ -46,6 +47,8 @@
     position: relative;
     width: 100%;
 }
+
+/*Element vert sous Entrees, Plats, Desserts */
 
 .conteneur-entree::after, .conteneur-plats::after, .conteneur-desserts::after{
     content: '';
@@ -66,12 +69,22 @@
     }
 }
 
+/*la balise label recouvre toute la div*/
+.label--position{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
 /*Chaque bloc est un label conteneur flex */
 .label__conteneur{
     position: relative;
-    height: 5rem;
+    height: 4.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-end;
     cursor: pointer;
     user-select: none;
@@ -86,51 +99,36 @@
     }
 }
 
-@for $i from 1 through 9 {
-    label[for="input#{$i}-resto"]{
-       animation: apparition 1s backwards;
-       animation-delay: $i * 150ms;
-    }
-}
-@keyframes apparition{
-    0%{
-        transform: translateY(4rem) scale(0.8);
-        opacity: 0;
-    }
+/*Style des éléments enfants du conteneur label
+Attention, le conteneur est une div, la balise label est positionnée
+en absolute sur tout le conteneur */
 
-    10%{
-        opacity: 0;
-    }
-
-    70%{
-        transform: scale(1);
-    }
-        
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-/*Style des éléments enfants du conteneur label */
 .label{
     &__titre{
         height: 100%;
         width: 80%;
         padding-left: 1rem;
+        transition: width 500ms ease;
         &h3{
             height: 50%;
             padding-top: 1rem;
+            white-space: nowrap;
         }
         &p{
             height: 50%;
             padding-top: 0.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 0.9rem;
         }
     }
     &__prix{
+        width: 20%;
         height: 50%;
         padding-top: 0.5rem;
         padding-right: 1rem;
+        text-align: right;
     }
     &__coche{
         width: 0;
@@ -150,14 +148,5 @@
             transform: rotate(0);
             transition: transform 1s ease;
         }
-    }
-}
-
-/*Action lorsque l'on selectionne un plat */
-
-input:checked + .label__conteneur > div:last-child{
-    width: 5rem;
-    &::after{
-        transform: rotate(360deg);
     }
 }

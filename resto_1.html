@@ -10,13 +10,13 @@
   </head>
     <body>
       <header class="header-resto">
-        <a href="accueil.html"><i class="fas fa-arrow-left"></i></a>
+        <a href="index.html"><i class="fas fa-arrow-left"></i></a>
           <h1>ohmyfood</h1>
       </header>
 
       <img class="resto-img" 
           srcset="images/restaurants/resto1-desktop.jpg 3200w, images/restaurants/resto1-desktop.jpg 1600w, images/restaurants/resto1-mobile.jpg 800w" 
-          src="images/restaurants/resto1-desktop.jpg" alt="resto_1">
+          src="images/restaurants/resto1-desktop.jpg" sizes="(min-width: 600px) 90vw, (min-width: 980px) 30vw, 100vw" alt="resto_1">
 
       <div class="conteneur-titre-resto">
         <h2>La palette du goût</h2>
@@ -31,102 +31,111 @@
               <p class="conteneur-resto__titre">Entrées</p>
 
               <input id="input1-resto" type="checkbox">
-              <label class="label__conteneur" for="input1-resto">
+              <div class="label__conteneur anim1">
+                <label class="label--position" for="input1-resto"></label>
                 <div class="label__titre">
-                  <h3 class="label__titreh3">Tartare de poulpe acidulé</h3>
-                  <p class="label__titrep">Aux zests d'orange</p>
+                  <h3 class="label__titreh3">Fricassée d'escargot</h3>
+                  <p class="label__titrep">Au piment d'Espelette</p>
                 </div>
-                <p class="label__prix">20€</p>
+                <p class="label__prix">25€</p>
                 <div class="label__coche"></div>
-              </label>
+              </div>
 
               <input id="input2-resto" type="checkbox">
-              <label class="label__conteneur" for="input2-resto">
+              <div class="label__conteneur anim2">
+                <label class="label--position" for="input2-resto"></label>
                 <div class="label__titre">
-                  <h3 class="label__titreh3">Tartare de poulpe acidulé</h3>
-                  <p class="label__titrep">Aux zests d'orange</p>
+                  <h3 class="label__titreh3">Foie gras de canard mi-cuit</h3>
+                  <p class="label__titrep">Et ses copeaux de truffe noire</p>
                 </div>
-                <p class="label__prix">20€</p>
+                <p class="label__prix">35€</p>
                 <div class="label__coche"></div>
-              </label>
+              </div>
 
               <input id="input3-resto" type="checkbox">
-              <label class="label__conteneur" for="input3-resto">
+              <div class="label__conteneur anim3">
+                <label class="label--position" for="input3-resto"></label>
                 <div class="label__titre">
-                  <h3 class="label__titreh3">Tartare de poulpe acidulé</h3>
-                  <p class="label__titrep">Aux zests d'orange</p>
+                  <h3 class="label__titreh3">Oeuf au plat</h3>
+                  <p class="label__titrep">Assaisonné à la truffe sur lit de caviar</p>
                 </div>
                 <p class="label__prix">20€</p>
                 <div class="label__coche"></div>
-              </label>
+              </div>
             </div>
 
             <div class="conteneur-plats">
               <p class="conteneur-resto__titre">Plats</p>
 
               <input id="input4-resto" type="checkbox">
-              <label class="label__conteneur" for="input4-resto">
+              <div class="label__conteneur anim4">
+                <label class="label--position" for="input4-resto"></label>
                 <div class="label__titre">
-                  <h3 class="label__titreh3">Tartare de poulpe acidulé</h3>
-                  <p class="label__titrep">Aux zests d'orange</p>
+                  <h3 class="label__titreh3">Filet de boeuf aux herbes</h3>
+                  <p class="label__titrep">Accompagné de sa ribambelle de légumes</p>
                 </div>
-                <p class="label__prix">20€</p>
+                <p class="label__prix">40€</p>
                 <div class="label__coche"></div>
-              </label>
+              </div>
 
               <input id="input5-resto" type="checkbox">
-              <label class="label__conteneur" for="input5-resto">
+              <div class="label__conteneur anim5">
+                <label class="label--position" for="input5-resto"></label>
                 <div class="label__titre">
-                  <h3 class="label__titreh3">Tartare de poulpe acidulé</h3>
-                  <p class="label__titrep">Aux zests d'orange</p>
+                  <h3 class="label__titreh3">Parmentier de queue de boeuf</h3>
+                  <p class="label__titrep">À la truffe noire sur sa purée de panais</p>
                 </div>
-                <p class="label__prix">20€</p>
+                <p class="label__prix">35€</p>
                 <div class="label__coche"></div>
-              </label>
+              </div>
 
               <input id="input6-resto" type="checkbox">
-              <label class="label__conteneur" for="input6-resto">
+              <div class="label__conteneur anim6">
+                <label class="label--position" for="input6-resto"></label>
                 <div class="label__titre">
-                  <h3 class="label__titreh3">Tartare de poulpe acidulé</h3>
-                  <p class="label__titrep">Aux zests d'orange</p>
+                  <h3 class="label__titreh3">Filet de turbot</h3>
+                  <p class="label__titrep">Aux agrumes</p>
                 </div>
-                <p class="label__prix">20€</p>
+                <p class="label__prix">44€</p>
                 <div class="label__coche"></div>
-              </label>
+              </div>
             </div>
 
             <div class="conteneur-desserts">
               <p class="conteneur-resto__titre">Desserts</p>
 
               <input id="input7-resto" type="checkbox">
-              <label class="label__conteneur" for="input7-resto">
+              <div class="label__conteneur anim7">
+                <label class="label--position" for="input7-resto"></label>
                 <div class="label__titre">
-                  <h3 class="label__titreh3">Tartare de poulpe acidulé</h3>
-                  <p class="label__titrep">Aux zests d'orange</p>
+                  <h3 class="label__titreh3">Paris-Brest</h3>
+                  <p class="label__titrep">Revisité</p>
                 </div>
-                <p class="label__prix">20€</p>
+                <p class="label__prix">18€</p>
                 <div class="label__coche"></div>
-              </label>
+              </div>
 
               <input id="input8-resto" type="checkbox">
-              <label class="label__conteneur" for="input8-resto">
+              <div class="label__conteneur anim8">
+                <label class="label--position" for="input8-resto"></label>
                 <div class="label__titre">
-                  <h3 class="label__titreh3">Tartare de poulpe acidulé</h3>
-                  <p class="label__titrep">Aux zests d'orange</p>
+                  <h3 class="label__titreh3">Macaron au chocolat d'exception</h3>
+                  <p class="label__titrep">Et glace à la vanille de Madagascar</p>
                 </div>
-                <p class="label__prix">20€</p>
+                <p class="label__prix">22€</p>
                 <div class="label__coche"></div>
-              </label>
+              </div>
 
               <input id="input9-resto" type="checkbox">
-              <label class="label__conteneur" for="input9-resto">
+              <div class="label__conteneur anim9">
+                <label class="label--position" for="input9-resto"></label>
                 <div class="label__titre">
-                  <h3 class="label__titreh3">Tartare de poulpe acidulé</h3>
-                  <p class="label__titrep">Aux zests d'orange</p>
+                  <h3 class="label__titreh3">Mousse au chocolat</h3>
+                  <p class="label__titrep">Au piment d'Espelette et à la truffe noire</p>
                 </div>
-                <p class="label__prix">20€</p>
+                <p class="label__prix">23€</p>
                 <div class="label__coche"></div>
-              </label>
+              </div>
             </div>
 
             <button class="conteneur-resto__btn" type="submit">Commander</button>

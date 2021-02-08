@@ -1,19 +1,5 @@
-/*Calculateurs REM*/
-
-@function calculate-rem($size) {
-	$rem-size: $size/$base-font-size;
-	@return $rem-size * 1rem;
-}
-
-@mixin font-size($size) {
-	font-size:$size;
-	font-size:calculate-rem($size);
-}
-
 /*Fontion lighten*/
-
 @function light($color, $amount){
 	$colorlight: lighten($color, $amount);
 	@return $colorlight;
 }
-
