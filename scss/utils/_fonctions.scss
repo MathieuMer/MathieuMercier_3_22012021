@@ -1,5 +1,49 @@
-/*Fontion lighten*/
+//--------------Lighten----------------------
 @function light($color, $amount){
 	$colorlight: lighten($color, $amount);
 	@return $colorlight;
+}
+
+//--------------MEDIA QUERY MANAGER----------
+/*
+0 - 600px: phone
+600 - 900px: tablet portrait
+900 - 1200px: tablet landscape
+1200 - 1800px: desktop
+1800 - 2560px: desktop HD
+2560 et +: desktop 4K
+*/
+
+// Variables breakpoints media querries:
+$tab-port-mini: 600px;
+$tab-land-mini: 900px;
+$desktop-mini: 1200px;
+$desktophd-mini: 1800px;
+$desktop4k-mini: 2560px;
+
+// Mixin media querries:
+/*
+Argument $device choice:
+tab-port
+tab-land
+desktop
+desktophd
+desktop4k
+*/
+@mixin responsive($device) {
+	@if $device == tab-port{
+		@media screen and(min-width: $tab-port-mini) {@content;}
+	}
+	@else if $device == tab-land{
+		@media screen and(min-width: $tab-land-mini) {@content;}
+	}
+	@else if $device == desktop{
+		@media screen and(min-width: $desktop-mini) {@content;}
+	}
+	@else if $device == desktophd{
+		@media screen and(min-width: $desktophd-mini) {@content;}
+	}
+	@else if $device == desktop4k{
+		@media screen and(min-width: $desktop4k-mini) {@content;}
+	}
 }

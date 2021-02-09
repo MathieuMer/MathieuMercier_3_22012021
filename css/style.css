@@ -1,5 +1,20 @@
 @charset "UTF-8";
-/*Fontion lighten*/
+/*
+0 - 600px: phone
+600 - 900px: tablet portrait
+900 - 1200px: tablet landscape
+1200 - 1800px: desktop
+1800 - 2560px: desktop HD
+2560 et +: desktop 4K
+*/
+/*
+Argument $device choice:
+tab-port
+tab-land
+desktop
+desktophd
+desktop4k
+*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 /* font-family: 'Roboto', sans-serif;
@@ -66,6 +81,24 @@ html {
 
 body {
   width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
 }
 
 h2 {
@@ -179,7 +212,7 @@ h3 {
   color: #303030;
   -webkit-box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
           box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
-  padding: 3rem 4rem 0 4rem;
+  padding: 3rem 2rem 0 2rem;
   background: repeating-linear-gradient(transparent, #99E2D0 100%), repeating-linear-gradient(0.25turn, transparent, #FF79DA 10%);
   border: #9356DC ridge 6px;
   border-radius: 1rem;
@@ -237,6 +270,23 @@ h3 {
   text-align: center;
 }
 
+@media screen and (min-width: 600px) {
+  .conteneur-form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 0 0 1rem 0;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
 .conteneur-form__bloc-input {
   width: 100%;
   height: 3rem;
@@ -254,6 +304,16 @@ h3 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+@media screen and (min-width: 600px) {
+  .conteneur-form__bloc-input {
+    width: 50%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    border-radius: 2rem;
+  }
 }
 
 .conteneur-form__bloc-input label {
@@ -275,11 +335,27 @@ h3 {
   font-size: 1.2rem;
 }
 
+@media screen and (min-width: 600px) {
+  .conteneur-form__bloc-input__input {
+    border-radius: 2rem;
+  }
+}
+
 .conteneur-form h2 {
   padding-left: 3rem;
   padding-right: 3rem;
   margin-top: 2rem;
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .conteneur-form h2 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-top: 1rem;
+    width: 100%;
+  }
 }
 
 .conteneur-form p {
@@ -289,8 +365,28 @@ h3 {
   margin-bottom: 0;
 }
 
+@media screen and (min-width: 600px) {
+  .conteneur-form p {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+}
+
 .conteneur-form button {
   margin-top: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .conteneur-form button {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    margin-top: 0;
+  }
 }
 
 /*Style Nav Fonctionnement*/
@@ -309,6 +405,25 @@ h3 {
   padding-right: 5%;
 }
 
+@media screen and (min-width: 600px) {
+  .fonctionnement {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    padding-bottom: 1rem;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 .fonctionnement h2 {
   margin-top: 2rem;
   margin-bottom: 0;
@@ -316,13 +431,21 @@ h3 {
       align-self: flex-start;
 }
 
+@media screen and (min-width: 600px) {
+  .fonctionnement h2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
 .fonctionnement__btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #F6F6F6;
   border-radius: 1.5rem;
   width: 97%;
@@ -332,6 +455,14 @@ h3 {
           box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
   text-decoration: none;
   color: #000;
+}
+
+@media screen and (min-width: 600px) {
+  .fonctionnement__btn {
+    width: 30%;
+    text-align: center;
+    padding: 0.6rem 0;
+  }
 }
 
 .fonctionnement__btn:hover {
@@ -369,6 +500,12 @@ h3 {
   font-weight: 600;
 }
 
+@media screen and (min-width: 600px) {
+  .fonctionnement__btn--texte {
+    margin-left: 0;
+  }
+}
+
 /*Style Section Restaurant*/
 .restaurants {
   position: relative;
@@ -376,6 +513,34 @@ h3 {
   background: #F6F6F6;
   margin-top: 4rem;
   padding: 5% 5%;
+}
+
+@media screen and (min-width: 600px) {
+  .restaurants {
+    height: 50%;
+    margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 1rem 1rem 0 1rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .restaurants h2 {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .restaurants a {
@@ -388,12 +553,26 @@ h3 {
   position: relative;
 }
 
+@media screen and (min-width: 600px) {
+  .restaurants__card {
+    width: 45%;
+    margin: 1rem 0;
+    height: 40%;
+  }
+}
+
 .restaurants__card__img {
   width: 100%;
-  height: 180px;
+  height: 11rem;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: calculate-rem(15px) calculate-rem(15px) 0 0;
+  border-radius: 1rem 1rem 0 0;
+}
+
+@media screen and (min-width: 600px) {
+  .restaurants__card__img {
+    height: 70%;
+  }
 }
 
 .restaurants__card__nouveau {
@@ -409,10 +588,10 @@ h3 {
 }
 
 .restaurants__card__caption {
-  padding: 0 calculate-rem(20px);
-  height: 70px;
+  padding: 0 1.5rem;
+  height: 4rem;
   background-color: #FFFFFF;
-  border-radius: 0 0 calculate-rem(15px) calculate-rem(15px);
+  border-radius: 0 0 1rem 1rem;
   margin-top: -3px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -429,12 +608,18 @@ h3 {
           align-items: flex-start;
 }
 
+@media screen and (min-width: 600px) {
+  .restaurants__card__caption {
+    height: 30%;
+  }
+}
+
 .restaurants__card__caption h3 {
   height: 35%;
 }
 
 .restaurants__card__caption p {
-  height: 40%;
+  height: 50%;
 }
 
 /*Image page resto*/
@@ -459,7 +644,7 @@ h3 {
   background: #F6F6F6;
   border-radius: 2rem 2rem 0 0;
   padding: 2rem 1rem 0rem 1rem;
-  margin-top: calculate-rem(-32px);
+  margin-top: -2rem;
   position: -webkit-sticky;
   position: sticky;
 }
@@ -679,6 +864,14 @@ header {
           box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (min-width: 600px) {
+  header {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
 header h1 {
   text-align: center;
   font-size: 2rem;
@@ -698,8 +891,24 @@ footer {
   padding: 1.5rem 0 2rem 2rem;
 }
 
+@media screen and (min-width: 600px) {
+  footer {
+    padding: 0.5rem 0 0rem 0;
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+}
+
 footer .footer__logo {
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  footer .footer__logo {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
 }
 
 footer p {
@@ -717,9 +926,26 @@ footer ul {
   padding: 0;
 }
 
+@media screen and (min-width: 600px) {
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 footer li {
   list-style: none;
   margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 600px) {
+  footer li {
+    margin-left: 2rem;
+  }
 }
 
 footer .footer__icon:before {
@@ -730,6 +956,12 @@ footer .footer__icon:before {
   -webkit-font-smoothing: antialiased;
   color: white;
   width: 1.8rem;
+}
+
+@media screen and (min-width: 600px) {
+  footer .icon1 {
+    margin-left: 0;
+  }
 }
 
 footer .icon1:before {

@@ -2,8 +2,16 @@ footer{
     background: #353535;
     color: white;
     padding: 1.5rem 0 2rem 2rem;
+    @include responsive(tab-port){
+        padding: 0.5rem 0 0rem 0;
+        order: 5;
+    }
     & .footer__logo{
         margin-bottom: 1rem;
+        @include responsive(tab-port){
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
     }
     & p{
         font-family: 'Shrikhand', cursive;
@@ -16,10 +24,17 @@ footer{
     }
     & ul{
         padding: 0;
+        @include responsive(tab-port){
+            display: flex;
+            justify-content: center;
+        }
     }
     & li{
         list-style: none;
         margin-top: 0.5rem;
+        @include responsive(tab-port){
+            margin-left: 2rem;
+        }
     }
     
     & .footer__icon:before{
@@ -32,11 +47,17 @@ footer{
         width: 1.8rem;
     }
 
-    & .icon1:before{
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        content: "\f2e7";
+    & .icon1{
+        @include responsive(tab-port){
+            margin-left: 0;
+        }
+        &:before{
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            content: "\f2e7";
+        }
     }
+
     & .icon2:before{
         font-family: 'Font Awesome 5 Free';
         font-weight: 900;
