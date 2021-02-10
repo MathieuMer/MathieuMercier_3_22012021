@@ -4,6 +4,18 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
 /*Règles globales*/
 html{
     font-size: $base-font-size;
+    @include responsive(tab-port-big) {
+        font-size: $base-font-size-tab;
+    }
+    @include responsive(desktop) {
+        font-size: $base-font-size-medium;
+    }
+    @include responsive(desktophd) {
+        font-size: $base-font-size-hd;
+    }
+    @include responsive(desktop4k) {
+        font-size: $base-font-size-4k;
+    }
 }
 
 body{
@@ -11,9 +23,10 @@ body{
     @include responsive(tab-port){
         height: 100vh;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: flex-start;
     }
 }
 

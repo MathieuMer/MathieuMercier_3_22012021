@@ -7,7 +7,7 @@
 //--------------MEDIA QUERY MANAGER----------
 /*
 0 - 600px: phone
-600 - 900px: tablet portrait
+600 - 900: tablet portrait
 900 - 1200px: tablet landscape
 1200 - 1800px: desktop
 1800 - 2560px: desktop HD
@@ -35,13 +35,16 @@ desktop4k
 		@media screen and(min-width: $tab-port-mini) {@content;}
 	}
 	@else if $device == tab-land{
-		@media screen and(min-width: $tab-land-mini) {@content;}
+		@media screen and (min-width: $tab-land-mini) and (orientation: landscape) {@content;}
+	}
+	@else if $device == tab-port-big{
+		@media screen and (min-width: $tab-land-mini) and (orientation: portrait) {@content;}
 	}
 	@else if $device == desktop{
-		@media screen and(min-width: $desktop-mini) {@content;}
+		@media screen and(min-width: $desktop-mini) and(max-width: $desktophd-mini) {@content;}
 	}
 	@else if $device == desktophd{
-		@media screen and(min-width: $desktophd-mini) {@content;}
+		@media screen and(min-width: $desktophd-mini) and(max-width: $desktop4k-mini) {@content;}
 	}
 	@else if $device == desktop4k{
 		@media screen and(min-width: $desktop4k-mini) {@content;}
