@@ -14,6 +14,9 @@
         top: 80%;
         right: 10%;
         color: black;
+        @include responsive(tab-port){
+            top: 84%;
+        }
     }
 
     .label__fav#{$var}--resto{

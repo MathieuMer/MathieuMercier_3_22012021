@@ -7,26 +7,11 @@ html{
     @include responsive(tab-port-big) {
         font-size: $base-font-size-tab;
     }
-    @include responsive(desktop) {
-        font-size: $base-font-size-medium;
-    }
     @include responsive(desktophd) {
         font-size: $base-font-size-hd;
     }
     @include responsive(desktop4k) {
         font-size: $base-font-size-4k;
-    }
-}
-
-body{
-    width: 100%;
-    @include responsive(tab-port){
-        height: 100vh;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-content: flex-start;
     }
 }
 

@@ -89,7 +89,8 @@ input:checked + .label__conteneur{
     & .label__coche {
         width: 20%;
         &::after{
-        transform: rotate(360deg);
+            transform: rotate(360deg);
+            opacity: 1;
         }
     }  
     & .label__titre{

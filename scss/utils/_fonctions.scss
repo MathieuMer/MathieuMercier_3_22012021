@@ -15,8 +15,8 @@
 */
 
 // Variables breakpoints media querries:
-$tab-port-mini: 600px;
-$tab-land-mini: 900px;
+$tab-port-mini: 767px;
+$tab-land-mini: 1023px;
 $desktop-mini: 1200px;
 $desktophd-mini: 1800px;
 $desktop4k-mini: 2560px;
@@ -24,7 +24,8 @@ $desktop4k-mini: 2560px;
 // Mixin media querries:
 /*
 Argument $device choice:
-tab-port
+tab-port : definit la structure tablette portrait
+tab-port-big
 tab-land
 desktop
 desktophd
@@ -32,7 +33,7 @@ desktop4k
 */
 @mixin responsive($device) {
 	@if $device == tab-port{
-		@media screen and(min-width: $tab-port-mini) {@content;}
+		@media screen and(min-width: $tab-port-mini) and (orientation: portrait) {@content;}
 	}
 	@else if $device == tab-land{
 		@media screen and (min-width: $tab-land-mini) and (orientation: landscape) {@content;}
