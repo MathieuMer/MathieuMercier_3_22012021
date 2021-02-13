@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ohmyfood - Le délice des sens</title>
+    <!-- On peut avoir d'autres méta-données ici -->
+  </head>
+    <body class="body__resto body__resto--2">
+      <header class="header-resto">
+        <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+          <h1>ohmyfood</h1>
+      </header>
+
+      <img class="resto-img" 
+          srcset="images/restaurants/resto2-desktop.jpg 3200w, images/restaurants/resto2-desktop.jpg 1600w, images/restaurants/resto2-mobile.jpg 800w" 
+          src="images/restaurants/resto2-desktop.jpg" sizes="(min-width: 600px) 90vw, (min-width: 980px) 30vw, 100vw" alt="resto_2">
+
+      <div class="conteneur-titre-resto">
+        <h2>Le délice des sens</h2>
+        <input id="fav1" type="checkbox">
+        <label class="label__fav1--resto" for="fav1"><i class="far fa-heart"></i></label>
+      </div>
+
+      <section class="conteneur-resto">
+          <form>
+
+            <div class="conteneur-entree">
+              <p class="conteneur-resto__titre">Entrées</p>
+
+              <input id="input1-resto" type="checkbox">
+              <div class="label__conteneur anim1">
+                <label class="label--position" for="input1-resto"></label>
+                <div class="label__titre">
+                  <h3 class="label__titreh3">Tartare de thon</h3>
+                  <p class="label__titrep">Assaisonné au yuzu</p>
+                </div>
+                <p class="label__prix">25€</p>
+                <div class="label__coche"></div>
+              </div>
+
+              <input id="input2-resto" type="checkbox">
+              <div class="label__conteneur anim2">
+                <label class="label--position" for="input2-resto"></label>
+                <div class="label__titre">
+                  <h3 class="label__titreh3">Bouchée de homard croustillant</h3>
+                  <p class="label__titrep">Et sa farandole de petits légumes</p>
+                </div>
+                <p class="label__prix">35€</p>
+                <div class="label__coche"></div>
+              </div>
+
+              <input id="input3-resto" type="checkbox">
+              <div class="label__conteneur anim3">
+                <label class="label--position" for="input3-resto"></label>
+                <div class="label__titre">
+                  <h3 class="label__titreh3">Velouté de cèpes</h3>
+                  <p class="label__titrep">Aux truffes</p>
+                </div>
+                <p class="label__prix">20€</p>
+                <div class="label__coche"></div>
+              </div>
+            </div>
+
+            <div class="conteneur-plats">
+              <p class="conteneur-resto__titre">Plats</p>
+
+              <input id="input4-resto" type="checkbox">
+              <div class="label__conteneur anim4">
+                <label class="label--position" for="input4-resto"></label>
+                <div class="label__titre">
+                  <h3 class="label__titreh3">Poulet rôti aux herbes de Provence</h3>
+                  <p class="label__titrep">Et sa crème de truffe</p>
+                </div>
+                <p class="label__prix">40€</p>
+                <div class="label__coche"></div>
+              </div>
+
+              <input id="input5-resto" type="checkbox">
+              <div class="label__conteneur anim5">
+                <label class="label--position" for="input5-resto"></label>
+                <div class="label__titre">
+                  <h3 class="label__titreh3">Langouste rôtie</h3>
+                  <p class="label__titrep">Et ses légumes de saison</p>
+                </div>
+                <p class="label__prix">35€</p>
+                <div class="label__coche"></div>
+              </div>
+
+              <input id="input6-resto" type="checkbox">
+              <div class="label__conteneur anim6">
+                <label class="label--position" for="input6-resto"></label>
+                <div class="label__titre">
+                  <h3 class="label__titreh3">Côte de boeuf Angus</h3>
+                  <p class="label__titrep">Et sa purée de panais</p>
+                </div>
+                <p class="label__prix">44€</p>
+                <div class="label__coche"></div>
+              </div>
+            </div>
+
+            <div class="conteneur-desserts">
+              <p class="conteneur-resto__titre">Desserts</p>
+
+              <input id="input7-resto" type="checkbox">
+              <div class="label__conteneur anim7">
+                <label class="label--position" for="input7-resto"></label>
+                <div class="label__titre">
+                  <h3 class="label__titreh3">Farandole de desserts</h3>
+                  <p class="label__titrep">Du chef</p>
+                </div>
+                <p class="label__prix">18€</p>
+                <div class="label__coche"></div>
+              </div>
+
+              <input id="input8-resto" type="checkbox">
+              <div class="label__conteneur anim8">
+                <label class="label--position" for="input8-resto"></label>
+                <div class="label__titre">
+                  <h3 class="label__titreh3">Crème brulée</h3>
+                  <p class="label__titrep">Revisitée</p>
+                </div>
+                <p class="label__prix">22€</p>
+                <div class="label__coche"></div>
+              </div>
+
+              <input id="input9-resto" type="checkbox">
+              <div class="label__conteneur anim9">
+                <label class="label--position" for="input9-resto"></label>
+                <div class="label__titre">
+                  <h3 class="label__titreh3">Tiramisu</h3>
+                  <p class="label__titrep">À la noisette</p>
+                </div>
+                <p class="label__prix">23€</p>
+                <div class="label__coche"></div>
+              </div>
+            </div>
+
+            <button class="conteneur-resto__btn" type="submit">Commander</button>
+
+          </form>
+      </section>
+
+      <footer>
+        <p class="footer__logo">ohmyfood</p>
+        <ul class="footer__ul">
+          <li class="footer__icon icon1"><a href="#">Proposer un restaurant</a></li>
+          <li class="footer__icon icon2"><a href="#">Devenir partenaire</a></li>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
+        </ul>
+      </footer>
+
+    </body>
+</html>

@@ -60,7 +60,7 @@
 }
 
 // Page RESTO: Animations apparition progressive des 9 plats, 1 par 1
-@for $i from 1 through 9 {
+@for $i from 1 through 10 {
     .anim#{$i}{
        animation: apparition 1s backwards;
        animation-delay: $i * 150ms;

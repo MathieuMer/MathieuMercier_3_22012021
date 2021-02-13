@@ -241,15 +241,9 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   font-size: 8rem;
-  margin-bottom: 12rem;
+  margin-bottom: 9.5rem;
   z-index: -3;
   color: #303030;
-  -webkit-box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
-          box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
-  padding: 3rem 2rem 0 2rem;
-  background: repeating-linear-gradient(transparent, #99E2D0 100%), repeating-linear-gradient(0.25turn, transparent, #FF79DA 10%);
-  border: #9356DC ridge 6px;
-  border-radius: 1rem;
 }
 
 .loader__forkFG {
@@ -847,7 +841,55 @@ h3 {
         -ms-flex-align: center;
             align-items: center;
     min-height: 100vh;
-    background: center no-repeat url("../images/restaurants/resto1-ultra.jpg");
+  }
+  .body__resto--1 {
+    background: no-repeat center url("../images/restaurants/resto1-ultra.jpg");
+  }
+  .body__resto--2 {
+    background: no-repeat center url("../images/restaurants/resto2-ultra.jpg");
+  }
+  .body__resto--3 {
+    background: no-repeat center url("../images/restaurants/resto3-ultra.jpg");
+  }
+  .body__resto--4 {
+    background: no-repeat center url("../images/restaurants/resto4-ultra.jpg");
+  }
+}
+
+@media screen and (min-width: 1023px) and (orientation: landscape) {
+  .body__resto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 100vh;
+  }
+  .body__resto--1 {
+    background: no-repeat center url("../images/restaurants/resto1-ultra.jpg");
+    background-size: cover;
+  }
+  .body__resto--2 {
+    background: no-repeat center url("../images/restaurants/resto2-ultra.jpg");
+    background-size: cover;
+  }
+  .body__resto--3 {
+    background: no-repeat center url("../images/restaurants/resto3-ultra.jpg");
+    background-size: cover;
+  }
+  .body__resto--4 {
+    background: no-repeat center url("../images/restaurants/resto4-ultra.jpg");
+    background-size: cover;
   }
 }
 
@@ -860,6 +902,15 @@ h3 {
 }
 
 @media screen and (min-width: 767px) and (orientation: portrait) {
+  .resto-img {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1023px) and (orientation: landscape) {
   .resto-img {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -901,6 +952,20 @@ h3 {
   }
 }
 
+@media screen and (min-width: 1023px) and (orientation: landscape) {
+  .conteneur-titre-resto {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 100%;
+    border-radius: 0;
+    margin-top: 0;
+    background: none;
+    background: rgba(246, 246, 246, 0.5);
+    padding: 1.5rem 0 0.5rem 0;
+  }
+}
+
 .conteneur-titre-resto h2 {
   font-family: 'Shrikhand', cursive;
 }
@@ -914,7 +979,19 @@ h3 {
   }
 }
 
+@media screen and (min-width: 1023px) and (orientation: landscape) {
+  .conteneur-titre-resto h2 {
+    margin-left: 10%;
+  }
+}
+
 @media screen and (min-width: 767px) and (orientation: portrait) {
+  .conteneur-titre-resto label {
+    margin-right: 10%;
+  }
+}
+
+@media screen and (min-width: 1023px) and (orientation: landscape) {
   .conteneur-titre-resto label {
     margin-right: 10%;
   }
@@ -928,6 +1005,29 @@ h3 {
 }
 
 @media screen and (min-width: 767px) and (orientation: portrait) {
+  .conteneur-resto {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 0;
+    background: rgba(246, 246, 246, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1023px) and (orientation: landscape) {
   .conteneur-resto {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
@@ -984,10 +1084,38 @@ h3 {
   }
 }
 
+@media screen and (min-width: 1023px) and (orientation: landscape) {
+  .conteneur-resto form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 98%;
+    padding: 0 1rem 1rem 1rem;
+    margin-bottom: 1rem;
+    border: #99E2D0 solid 2px;
+    border-radius: 2rem 2rem 20% 20%;
+  }
+}
+
 .conteneur-resto__titre {
   text-transform: uppercase;
   margin-bottom: 1.5rem;
   font-size: 1rem;
+}
+
+@media screen and (min-width: 1023px) and (orientation: landscape) {
+  .conteneur-resto__titre {
+    width: 100%;
+  }
 }
 
 .conteneur-resto__btn {
@@ -999,6 +1127,14 @@ h3 {
   .conteneur-resto__btn {
     -ms-flex-item-align: end;
         align-self: flex-end;
+  }
+}
+
+@media screen and (min-width: 1023px) and (orientation: landscape) {
+  .conteneur-resto__btn {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-top: 2rem;
   }
 }
 
@@ -1014,6 +1150,20 @@ h3 {
   }
 }
 
+@media screen and (min-width: 1023px) and (orientation: landscape) {
+  .conteneur-entree, .conteneur-plats, .conteneur-desserts {
+    width: 95%;
+    padding-top: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 /*Element vert sous Entrees, Plats, Desserts */
 .conteneur-resto__titre::after {
   content: '';
@@ -1023,6 +1173,12 @@ h3 {
   height: 0.2rem;
   top: 4rem;
   left: 0;
+}
+
+@media screen and (min-width: 1023px) and (orientation: landscape) {
+  .conteneur-resto__titre::after {
+    top: 2.6rem;
+  }
 }
 
 /*Inputs 1 à 9 des pages resto cachées, attention à input page d'acceuil */
@@ -1071,6 +1227,11 @@ h3 {
   left: -9999px;
 }
 
+#input10-resto {
+  position: absolute;
+  left: -9999px;
+}
+
 /*la balise label recouvre toute la div*/
 .label--position {
   position: absolute;
@@ -1109,6 +1270,14 @@ h3 {
 @media screen and (min-width: 767px) and (orientation: portrait) {
   .label__conteneur {
     background: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@media screen and (min-width: 1023px) and (orientation: landscape) {
+  .label__conteneur {
+    background: rgba(255, 255, 255, 0.4);
+    width: 30%;
+    margin-top: 0;
   }
 }
 
@@ -1787,6 +1956,13 @@ button:hover {
           animation: apparition 1s backwards;
   -webkit-animation-delay: 1350ms;
           animation-delay: 1350ms;
+}
+
+.anim10 {
+  -webkit-animation: apparition 1s backwards;
+          animation: apparition 1s backwards;
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
 }
 
 @-webkit-keyframes apparition {

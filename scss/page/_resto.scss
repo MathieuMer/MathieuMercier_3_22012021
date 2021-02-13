@@ -9,7 +9,42 @@
             justify-content: flex-start;
             align-items: center;
             min-height: 100vh;
-            background: center no-repeat url("../images/restaurants/resto1-ultra.jpg");
+            &--1{
+                background: no-repeat center url("../images/restaurants/resto1-ultra.jpg");
+            }
+            &--2{
+                background: no-repeat center url("../images/restaurants/resto2-ultra.jpg");
+            }
+            &--3{
+                background: no-repeat center url("../images/restaurants/resto3-ultra.jpg");
+            }
+            &--4{
+                background: no-repeat center url("../images/restaurants/resto4-ultra.jpg");
+            }
+        }
+        @include responsive(tab-land){
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+            &--1{
+                background: no-repeat center url("../images/restaurants/resto1-ultra.jpg");
+                background-size: cover;
+            }
+            &--2{
+                background: no-repeat center url("../images/restaurants/resto2-ultra.jpg");
+                background-size: cover;
+            }
+            &--3{
+                background: no-repeat center url("../images/restaurants/resto3-ultra.jpg");
+                background-size: cover;
+            }
+            &--4{
+                background: no-repeat center url("../images/restaurants/resto4-ultra.jpg");
+                background-size: cover;
+            }
         }
     }
 }
@@ -20,6 +55,10 @@
     height: 250px;
     object-fit: cover;
     @include responsive(tab-port){
+        order: 2;
+        display: none;
+    }
+    @include responsive(tab-land){
         order: 2;
         display: none;
     }
@@ -45,6 +84,15 @@
         background: rgba($color: #f6f6f6, $alpha: 0.5);
         padding: 1.5rem 0 1rem 0;
     }
+    @include responsive(tab-land){
+        order: 3;
+        width: 100%;
+        border-radius: 0;
+        margin-top: 0;
+        background: none;
+        background: rgba($color: #f6f6f6, $alpha: 0.5);
+        padding: 1.5rem 0 0.5rem 0;
+    }
     & h2 {
     font-family: 'Shrikhand', cursive;
         @include responsive(tab-port){
@@ -53,9 +101,15 @@
             padding-bottom: 1rem;
             border-bottom: $tertiaire solid 0.2rem;
         }
+        @include responsive(tab-land){
+            margin-left: 10%;
+        }
     }
     & label {
         @include responsive(tab-port){
+            margin-right: 10%;
+        }
+        @include responsive(tab-land){
             margin-right: 10%;
         }
     }
@@ -68,6 +122,16 @@
     padding: 1rem 1rem 4rem 1rem;
     position: relative;
     @include responsive(tab-port){
+        order: 4;
+        width: 100%;
+        flex: 1;
+        padding: 0;
+        background: rgba($color: #f6f6f6, $alpha: 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    @include responsive(tab-land){
         order: 4;
         width: 100%;
         flex: 1;
@@ -91,17 +155,35 @@
             border: $tertiaire solid 2px;
             border-radius: 2rem 2rem 70% 2rem;
         }
+        @include responsive(tab-land){
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            width: 98%;
+            padding: 0 1rem 1rem 1rem;
+            margin-bottom: 1rem;
+            border: $tertiaire solid 2px;
+            border-radius: 2rem 2rem 20% 20%;
+        }
     }
     &__titre{
         text-transform: uppercase;
         margin-bottom: 1.5rem;
         font-size: 1rem;
+        @include responsive(tab-land){
+            width: 100%;
+        }
     }
     &__btn{
         margin-top: 3rem;
         width: 10rem;
         @include responsive(tab-port){
             align-self: flex-end;
+        }
+        @include responsive(tab-land){
+            align-self: flex-end;
+            margin-top: 2rem;
         }
     }
 }
@@ -112,6 +194,13 @@
     width: 100%;
     @include responsive(tab-port){
         width: 45%;
+    }
+    @include responsive(tab-land){
+        width: 95%;
+        padding-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }
 
@@ -125,11 +214,14 @@
     height: 0.2rem;
     top: 4rem;
     left: 0;
+    @include responsive(tab-land){
+        top: 2.6rem;
+    }
 }
 
 /*Inputs 1 à 9 des pages resto cachées, attention à input page d'acceuil */
 
-@for $i from 1 through 9 {
+@for $i from 1 through 10 {
     #input#{$i}-resto{
         position: absolute;
         left: -9999px;
@@ -162,7 +254,11 @@
     box-shadow: 0 0.2rem 0.2rem rgba($color: #000000, $alpha: 0.1);
     @include responsive(tab-port){
         background: rgba($color: #FFF, $alpha: 0.4);
-        
+    }
+    @include responsive(tab-land){
+        background: rgba($color: #FFF, $alpha: 0.4);
+        width: 30%;
+        margin-top: 0;
     }
     &:hover{
         box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
