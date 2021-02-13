@@ -31,11 +31,11 @@ header{
     }
     &-resto{
         @include responsive(tab-port){
-            background: rgba($color: #f6f6f6, $alpha: 0.5);
+            background: rgba($color: #f6f6f6, $alpha: 0.7);
             border-bottom: $tertiaire solid 2px;
         }
         @include responsive(tab-land){
-            background: rgba($color: #f6f6f6, $alpha: 0.5);
+            background: rgba($color: #f6f6f6, $alpha: 0.7);
             border-bottom: $tertiaire solid 2px;
         }
     }

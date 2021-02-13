@@ -946,8 +946,8 @@ h3 {
     width: 100%;
     border-radius: 0;
     background: none;
-    background: rgba(246, 246, 246, 0.5);
-    padding: 1.5rem 0 1rem 0;
+    background: rgba(246, 246, 246, 0.7);
+    padding: 1.5rem 0 2rem 0;
     margin-top: 0;
   }
 }
@@ -961,8 +961,8 @@ h3 {
     border-radius: 0;
     margin-top: 0;
     background: none;
-    background: rgba(246, 246, 246, 0.5);
-    padding: 1.5rem 0 1rem 0;
+    background: rgba(246, 246, 246, 0.7);
+    padding: 1.5rem 0 2rem 0;
     position: relative;
   }
 }
@@ -971,15 +971,15 @@ h3 {
   .conteneur-titre-resto:before {
     content: '';
     position: absolute;
-    height: 80%;
+    height: 60%;
     width: 90%;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.3);
-    z-index: -2;
-    border-radius: 5% / 50%;
+    -webkit-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 0;
+    border-radius: 3% / 50%;
     -webkit-box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.2);
             box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.2);
   }
@@ -989,21 +989,22 @@ h3 {
   .conteneur-titre-resto:before {
     content: '';
     position: absolute;
-    height: 80%;
+    height: 60%;
     width: 90%;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.3);
-    z-index: -2;
-    border-radius: 3% / 50%;
+    -webkit-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 0;
+    border-radius: 2% / 50%;
     -webkit-box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.2);
             box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.2);
   }
 }
 
 .conteneur-titre-resto h2 {
+  z-index: 1;
   font-family: 'Shrikhand', cursive;
 }
 
@@ -1048,7 +1049,7 @@ h3 {
         -ms-flex: 1;
             flex: 1;
     padding: 0;
-    background: rgba(246, 246, 246, 0.5);
+    background: rgba(246, 246, 246, 0.7);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1071,7 +1072,7 @@ h3 {
         -ms-flex: 1;
             flex: 1;
     padding: 0;
-    background: rgba(246, 246, 246, 0.5);
+    background: rgba(246, 246, 246, 0.7);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1480,14 +1481,14 @@ header a {
 
 @media screen and (min-width: 767px) {
   .header-resto {
-    background: rgba(246, 246, 246, 0.5);
+    background: rgba(246, 246, 246, 0.7);
     border-bottom: #99E2D0 solid 2px;
   }
 }
 
 @media screen and (min-width: 1023px) and (orientation: landscape) {
   .header-resto {
-    background: rgba(246, 246, 246, 0.5);
+    background: rgba(246, 246, 246, 0.7);
     border-bottom: #99E2D0 solid 2px;
   }
 }
