@@ -8,9 +8,11 @@ button{
     font-weight: 600;
     cursor: pointer;
     outline: none;
+    transition: 0.3s;
     &:hover{
         box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
-        transition: box-shadow 300ms;
+        transform: scale(1.1);
+        transition: box-shadow 300ms ease, transform 300ms ease;
         background: linear-gradient(to bottom right, light($secondaire, 4%), light($primaire, 4%));
     }
 }

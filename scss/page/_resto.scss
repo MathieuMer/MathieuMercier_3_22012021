@@ -79,10 +79,10 @@
         order: 3;
         width: 100%;
         border-radius: 0;
-        margin-top: 0;
         background: none;
         background: rgba($color: #f6f6f6, $alpha: 0.5);
         padding: 1.5rem 0 1rem 0;
+        margin-top: 0;
     }
     @include responsive(tab-land){
         order: 3;
@@ -91,15 +91,41 @@
         margin-top: 0;
         background: none;
         background: rgba($color: #f6f6f6, $alpha: 0.5);
-        padding: 1.5rem 0 0.5rem 0;
+        padding: 1.5rem 0 1rem 0;
+        position: relative;
+    }
+    &:before{
+        @include responsive(tab-port){
+            content: '';
+            position: absolute;
+            height: 80%;
+            width: 90%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba($color: #FFF, $alpha: 0.3);
+            z-index: -2;
+            border-radius: 5% / 50%;
+            box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
+        }
+        @include responsive(tab-land){
+            content: '';
+            position: absolute;
+            height: 80%;
+            width: 90%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba($color: #FFF, $alpha: 0.3);
+            z-index: -2;
+            border-radius: 3% / 50%;
+            box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
+        }
     }
     & h2 {
     font-family: 'Shrikhand', cursive;
         @include responsive(tab-port){
             margin-left: 10%;
-            padding-right: 3rem;
-            padding-bottom: 1rem;
-            border-bottom: $tertiaire solid 0.2rem;
         }
         @include responsive(tab-land){
             margin-left: 10%;
@@ -154,6 +180,7 @@
             padding: 2rem 2rem;
             border: $tertiaire solid 2px;
             border-radius: 2rem 2rem 70% 2rem;
+            margin: 2rem 0;
         }
         @include responsive(tab-land){
             flex-direction: row;
@@ -162,7 +189,7 @@
             flex-wrap: wrap;
             width: 98%;
             padding: 0 1rem 1rem 1rem;
-            margin-bottom: 1rem;
+            margin: 2rem 0;
             border: $tertiaire solid 2px;
             border-radius: 2rem 2rem 20% 20%;
         }
@@ -200,7 +227,7 @@
         padding-top: 1rem;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 }
 
@@ -235,8 +262,9 @@
     left: 0;
     height: 100%;
     width: 100%;
+    z-index: 2;
+    cursor: pointer;
 }
-
 
 /*Chaque bloc est un label conteneur flex */
 .label__conteneur{
@@ -245,13 +273,12 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    cursor: pointer;
-    user-select: none;
     background: #FFF;
     border-radius: 1rem;
     overflow: hidden;
     margin-top: 1rem;
     box-shadow: 0 0.2rem 0.2rem rgba($color: #000000, $alpha: 0.1);
+    transition: 300ms;
     @include responsive(tab-port){
         background: rgba($color: #FFF, $alpha: 0.4);
     }
@@ -260,13 +287,31 @@
         width: 30%;
         margin-top: 0;
     }
+    &--margin{
+        @include responsive(tab-land){
+            margin-top: 1rem;
+        }
+    }
     &:hover{
-        box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
-        transition: box-shadow 300ms;
+        @include responsive(desktop){
+            box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
+            transform: scale(1.1);
+            transition: box-shadow 300ms ease, transform 300ms ease;
+        }
+        @include responsive(desktophd){
+            box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
+            transform: scale(1.1);
+            transition: box-shadow 300ms ease, transform 300ms ease;
+        }
+        @include responsive(desktop4k){
+            box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
+            transform: scale(1.1);
+            transition: box-shadow 300ms ease, transform 300ms ease;
+        }
     }
 }
 
-/*Style des éléments enfants du conteneur label
+/* Style des éléments enfants du conteneur label
 Attention, le conteneur est une div, la balise label est positionnée
 en absolute sur tout le conteneur */
 
@@ -307,6 +352,7 @@ en absolute sur tout le conteneur */
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 1;
         &::after{
             position: absolute;
             text-align: center;
@@ -318,6 +364,7 @@ en absolute sur tout le conteneur */
             transform: rotate(0);
             opacity: 0;
             transition: transform 1s ease, opacity 0.5s ease;
+            z-index: -1;
         }
     }
 }

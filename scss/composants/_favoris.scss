@@ -17,6 +17,9 @@
         @include responsive(tab-port){
             top: 84%;
         }
+        @include responsive(tab-land){
+            top: 80%;
+        }
     }
 
     .label__fav#{$var}--resto{

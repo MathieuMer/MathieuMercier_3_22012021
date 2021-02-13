@@ -92,9 +92,19 @@ input:checked + .label__conteneur{
             transform: rotate(360deg);
             opacity: 1;
         }
-    }  
+    }
     & .label__titre{
         width: 60%;
+    }
+    @include responsive(tab-port){
+        box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
+        transform: scale(1.1);
+        transition: box-shadow 300ms ease, transform 300ms ease;
+    }
+    @include responsive(tab-land){
+        box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
+        transform: scale(1.1);
+        transition: box-shadow 300ms ease, transform 300ms ease;
     }
 }
 
