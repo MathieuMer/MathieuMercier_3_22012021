@@ -1,7 +1,8 @@
-@import "./utils/variables";
-@import "./utils/fonctions";
+
+@import "./base/reset";
 @import "./base/font";
-@import "./base/style-global";
+@import "./utils/variables";
+@import "./utils/responsive";
 @import "./page/index";
 @import "./page/resto";
 @import "./layouts/header";

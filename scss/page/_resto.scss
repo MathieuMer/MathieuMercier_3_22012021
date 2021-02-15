@@ -70,7 +70,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #F6F6F6;
+    background: $colorbg1;
     border-radius: 2rem 2rem 0 0;
     padding: 2rem 1rem 0rem 1rem;
     margin-top: -4rem;
@@ -80,7 +80,7 @@
         width: 100%;
         border-radius: 0;
         background: none;
-        background: rgba($color: #f6f6f6, $alpha: 0.7);
+        background: $colorbg1-trans;
         padding: 1.5rem 0 2rem 0;
         margin-top: 0;
     }
@@ -90,7 +90,7 @@
         border-radius: 0;
         margin-top: 0;
         background: none;
-        background: rgba($color: #f6f6f6, $alpha: 0.7);
+        background: $colorbg1-trans;
         padding: 1.5rem 0 2rem 0;
         position: relative;
     }
@@ -103,10 +103,10 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -60%);
-            background: rgba($color: #FFF, $alpha: 0.4);
+            background: rgba($color: $blanc, $alpha: 0.4);
             z-index: 0;
             border-radius: 3% / 50%;
-            box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
+            box-shadow: $ombresoutenue;
         }
         @include responsive(tab-land){
             content: '';
@@ -116,10 +116,10 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -60%);
-            background: rgba($color: #FFF, $alpha: 0.4);
+            background: rgba($color: $blanc, $alpha: 0.4);
             z-index: 0;
             border-radius: 2% / 50%;
-            box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
+            box-shadow: $ombresoutenue;
         }
     }
     & h2 {
@@ -145,7 +145,7 @@
 /*Style Section */
 
 .conteneur-resto{
-    background: #F6F6F6;
+    background: $colorbg1;
     padding: 1rem 1rem 4rem 1rem;
     position: relative;
     @include responsive(tab-port){
@@ -153,7 +153,7 @@
         width: 100%;
         flex: 1;
         padding: 0;
-        background: rgba($color: #f6f6f6, $alpha: 0.7);
+        background: $colorbg1-trans;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -163,7 +163,7 @@
         width: 100%;
         flex: 1;
         padding: 0;
-        background: rgba($color: #f6f6f6, $alpha: 0.7);
+        background: $colorbg1-trans;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -274,17 +274,17 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    background: #FFF;
+    background: $blanc;
     border-radius: 1rem;
     overflow: hidden;
     margin-top: 1rem;
-    box-shadow: 0 0.2rem 0.2rem rgba($color: #000000, $alpha: 0.1);
+    box-shadow: $ombreclaire;
     transition: 300ms;
     @include responsive(tab-port){
-        background: rgba($color: #FFF, $alpha: 0.4);
+        background: rgba($color: $blanc, $alpha: 0.4);
     }
     @include responsive(tab-land){
-        background: rgba($color: #FFF, $alpha: 0.4);
+        background: rgba($color: $blanc, $alpha: 0.4);
         width: 30%;
         margin-top: 0;
     }
@@ -295,17 +295,17 @@
     }
     &:hover{
         @include responsive(desktop){
-            box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
+            box-shadow: $ombresoutenue;
             transform: scale(1.1);
             transition: box-shadow 300ms ease, transform 300ms ease;
         }
         @include responsive(desktophd){
-            box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
+            box-shadow: $ombresoutenue;
             transform: scale(1.1);
             transition: box-shadow 300ms ease, transform 300ms ease;
         }
         @include responsive(desktop4k){
-            box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
+            box-shadow: $ombresoutenue;
             transform: scale(1.1);
             transition: box-shadow 300ms ease, transform 300ms ease;
         }
@@ -360,7 +360,7 @@ en absolute sur tout le conteneur */
             content: '\f058';
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
-            color: #FFF;
+            color: $blanc;
             font-size: 1.5rem;
             transform: rotate(0);
             opacity: 0;

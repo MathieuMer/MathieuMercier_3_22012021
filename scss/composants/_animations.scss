@@ -1,4 +1,6 @@
-// Page Index: Animations apparition progressive des 9 plats, 1 par 1
+// ----------LOADER PAGE INDEX-----------
+
+//Shake sur les icones couverts
 @keyframes shake {
     10%, 90% {
       transform: translate3d(-1px, 1px, 0);
@@ -21,6 +23,7 @@
     }
 }
 
+//Animation rotation sur l'assiette
 @keyframes loader_anim{
     from{
         transform: rotate(0);
@@ -30,6 +33,7 @@
     }
 }
 
+//Le loader disparait
 @keyframes loader_opacity{
     0%{
         opacity: 1;
@@ -42,7 +46,7 @@
     }
 }
 
-/*Delay apparition contenu de la page*/
+//Delay apparition contenu de la page
 .delay{
     animation: delay 3s;
 }
@@ -59,7 +63,7 @@
     }
 }
 
-// Page RESTO: Animations apparition progressive des 9 plats, 1 par 1
+// Page RESTO: Animations apparition progressive des 10 plats, 1 par 1
 @for $i from 1 through 10 {
     .anim#{$i}{
        animation: apparition 1s backwards;
@@ -97,14 +101,14 @@ input:checked + .label__conteneur{
         width: 60%;
     }
     @include responsive(tab-port){
-        box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
+        box-shadow: $ombresoutenue;
         transform: scale(1.1);
-        transition: box-shadow 300ms ease, transform 300ms ease;
+        transition: box-shadow $tempo1 ease, transform $tempo1 ease;
     }
     @include responsive(tab-land){
-        box-shadow: 0 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.2);
+        box-shadow: $ombresoutenue;
         transform: scale(1.1);
-        transition: box-shadow 300ms ease, transform 300ms ease;
+        transition: box-shadow $tempo1 ease, transform $tempo1 ease;
     }
 }
 
