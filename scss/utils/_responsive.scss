@@ -59,6 +59,9 @@ html{
     @include responsive(tab-port-big) {
         font-size: $base-font-size-tab;
     }
+	@include responsive(desktop) {
+        font-size: $base-font-size-medium;
+    }
     @include responsive(desktophd) {
         font-size: $base-font-size-hd;
     }

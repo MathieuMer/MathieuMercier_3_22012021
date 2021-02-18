@@ -10,6 +10,7 @@ header{
     @include responsive(tab-land){
         order: 1;
         width: 100%;
+        max-height: 4rem;
     }
     & h1{
         text-align: center;
